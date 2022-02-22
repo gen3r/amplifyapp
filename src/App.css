@@ -4,13 +4,19 @@
 
 .App-logo {
   height: 40vmin;
-  pointer-events: none;
+  pointer-events: stroke;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite .5s linear;
   }
+}
+
+.App-logo:hover {
+  pointer-events: stroke;
+  animation: App-logo-spin infinite 5s linear;
+  border-color: tomato;
 }
 
 .App-header {
@@ -24,8 +30,8 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.firstclass:hover {
+  animation: App-logo-spin infinite 1s linear;
 }
 
 .App-body {
@@ -33,7 +39,7 @@
   min-height: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: black;
@@ -45,8 +51,38 @@
   }
 }
 
+.gif-2 {
+  background-color: blue;
+  align-self: flex-end;
+  height: 25%;
+  width: 50%;
+}
+
+.gif-2:hover {
+  background-color: red;
+  align-self: flex-start;
+  height: 75%;
+  width: 50%;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .gif-2 {
+    animation: App-logo-scale infinite 5s reverse;
+    animation: App-logo-spin infinite 2s reverse;
+    
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .bruh {
+    animation: App-logo-spin infinite 1s both;
+  }
+}
+
 .gif-1 {
   height: max-content 1;
+  align-self: baseline;
 }
 
 @keyframes App-logo-spin {
@@ -63,6 +99,7 @@
     transform: scale(0.5, 1);
   }
   to {
-    transform: scale(1, 2);
+    transform: scale(1.5, 0.2);
   }
+  
 }
